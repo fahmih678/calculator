@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Bagian Kalkulator -->
+        <div class="card">
+            <div class="display-screen">
+                <div class="expression-text" id="expression-display"></div>
+                <div class="result-text" id="main-display">0</div>
+            </div>
+            <div class="button-grid">
+                <button class="clear-btn" onclick="clearCalculator()">C</button>
+                <button onclick="deleteLastChar()">⌫</button>
+                <button class="op-btn" onclick="appendInput('%')">%</button>
+                <button class="op-btn" onclick="appendInput('/')">/</button>
+
+                <button onclick="appendInput('7')">7</button>
+                <button onclick="appendInput('8')">8</button>
+                <button onclick="appendInput('9')">9</button>
+                <button class="op-btn" onclick="appendInput('*')">*</button>
+
+                <button onclick="appendInput('4')">4</button>
+                <button onclick="appendInput('5')">5</button>
+                <button onclick="appendInput('6')">6</button>
+                <button class="op-btn" onclick="appendInput('-')">-</button>
+
+                <button onclick="appendInput('1')">1</button>
+                <button onclick="appendInput('2')">2</button>
+                <button onclick="appendInput('3')">3</button>
+                <button class="op-btn" onclick="appendInput('+')">+</button>
+
+                <button onclick="appendInput('0')" style="grid-column: span 2;">0</button>
+                <button onclick="appendInput('.')">.</button>
+                <button class="equal-btn" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+        <!-- Bagian Riwayat (History) -->
+        <div class="card history-card">
+            <div class="history-header">
+                <h2>Riwayat Perhitungan</h2>
+                <button class="clear-history-btn" onclick="clearAllHistory()"> Hapus Riwayat</button>
+            </div>
+            <div id="history-list" class="history-list">
+                <!-- Riwayat akan dimuat disini -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

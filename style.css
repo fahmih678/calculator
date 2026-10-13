@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f5f7;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 24px 16px;
+}
+
+/* Container utama */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 680px;
+}
+
+@media (min-width: 640px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Kotak Kalkulator & Riwayat*/
+.card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+/* Layar Kalkulator */
+.display-screen {
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: right;
+    margin-bottom: 14px;
+}
+
+.expression-text {
+    font-size: 13px;
+    color: #6b7280;
+    min-height: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.result-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111827;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+/* Grid Tombol */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5e7eb;
+}
+
+button:active {
+    background-color: #d1d5db;
+}
+
+button.op-btn {
+    background-color: #e5e7eb;
+    font-weight: bold;
+}
+
+button.op-btn:hover {
+    background-color: #d1d5db;
+}
+
+button.equal-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #1d4ed8;
+    font-weight: bold;
+}
+
+button.equal-btn:hover {
+    background-color: #1d4ed8;
+}
+
+button.clear-btn {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fca5a5;
+}
+
+button.clear-btn:hover {
+    background-color: #fecaca;
+}
+
+/* Panel Riwayat */
+.history-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 12px;
+}
+
+.history-header h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #374151;
+}
+
+.clear-history-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    background: none;
+    border: 1px solid #d1d5db;
+    color: #6b7280;
+    border-radius: 4px;
+}
+
+.clear-history-btn:hover {
+    background-color: #f3f4f6;
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.history-list {
+    max-height: 280px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-item {
+    padding: 8px 10px;
+    background-color: #f8fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.history-item:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.history-exp {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.history-res {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-top: 2px;
+}
+
+.empty-state {
+    font-size: 13px;
+    color: #9ca3af;
+    text-align: center;
+    padding: 24px 0;
+}
